@@ -1,4 +1,4 @@
-import { readInput } from "./utils";
+import { readInput } from "../utils.js";
 
 const input = readInput("day1a.txt")
 console.log(input);
@@ -8,7 +8,7 @@ function calculateSum(offset = 1) {
     for (let i = 0; i < input.length; i++) {
         const j = (i+offset)%input.length;
         if (input[i] == input[j]) {
-            sum += parseInt(input[i]);
+            sum += parseInt(input[i]!);
         }
     }
     return sum;
